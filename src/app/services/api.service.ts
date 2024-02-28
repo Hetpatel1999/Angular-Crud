@@ -17,19 +17,19 @@ export class ApiService {
 
   postProduct(data: any){
 
-    return this.http.post<any>("http://localhost:3000/userList/",data, this.httpOptions);
+    return this.http.post<any>("http://localhost:3000/productList/",data, this.httpOptions);
   }
 
   getProduct(){
-    return this.http.get<any>("http://localhost:3000/userList/");
+    return this.http.get<any>("http://localhost:3000/productList/");
   }
 
   putProduct(data: any, id: number){
-    return this.http.put<any>("http://localhost:3000/userList/"+id,data, this.httpOptions);
+    return this.http.put<any>("http://localhost:3000/productList/"+id,data, this.httpOptions);
   }
 
   deleteProduct(id: number){
-    return this.http.delete<any>("http://localhost:3000/userList/"+id);
+    return this.http.delete<any>("http://localhost:3000/productList/"+id);
   }
 
 }
