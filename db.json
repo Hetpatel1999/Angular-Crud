@@ -5,7 +5,7 @@
       "catalogName": "Electronics",
       "freshness": "Refurbished",
       "price": 500,
-      "comment": "Test",
+      "comment": "Test code 123",
       "date": "2024-02-01T18:30:00.000Z",
       "id": "b44e"
     },
@@ -35,24 +35,6 @@
       "price": 500,
       "comment": "Test test",
       "date": "2024-02-21T18:30:00.000Z"
-    },
-    {
-      "id": "d3de",
-      "productName": "Masti",
-      "catalogName": "Spices",
-      "freshness": "Brand New",
-      "price": 520,
-      "comment": "Masti code",
-      "date": "2024-02-21T18:30:00.000Z"
-    },
-    {
-      "id": "19ad",
-      "productName": "Patel",
-      "catalogName": "Electronics",
-      "freshness": "Brand New",
-      "price": 600,
-      "comment": "test",
-      "date": "2024-02-09T18:30:00.000Z"
     }
   ],
   "userList": [
