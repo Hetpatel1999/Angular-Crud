@@ -1,43 +1,78 @@
-<h1 mat-dialog-title> Add Product</h1>
-<div mat-dialog-content>
-    <form [formGroup]="productForm">
+<h1 mat-dialog-title> Add Order</h1>
+<div mat-dialog-content class="dialog-container">
+    <form [formGroup]="orderForm">
+
         <mat-form-field appearance="outline">
-            <mat-label>Product Name</mat-label>
-            <input formControlName="productName" matInput placeholder="Name">
+            <mat-label>Buyer Name</mat-label>
+            <input formControlName="buyerName" matInput placeholder="Name">
         </mat-form-field>
+
         <mat-form-field appearance="outline">
             <mat-label>Product Catalog</mat-label>
             <mat-select formControlName="catalogName" placeholder="Catalog">
-                <mat-option *ngFor="let cal of catalog" [value]="cal" >
+                <mat-option *ngFor="let cal of catalog" [value]="cal">
                     {{cal}}
                 </mat-option>
-             </mat-select>
+            </mat-select>
         </mat-form-field>
+
         <mat-form-field appearance="outline">
-            <mat-label>Production date</mat-label>
+            <mat-label>Order date</mat-label>
             <input formControlName="date" matInput [matDatepicker]="picker">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <label for="">
-            <h1>Freshness</h1>
-        </label>
-        <mat-radio-group formControlName="freshness" class="example-radio-group">
-            <mat-radio-button  class="example-radio-button" *ngFor="let fresh of FreshnessList" [value]="fresh">
-                {{fresh}}
-            </mat-radio-button>
-        </mat-radio-group>
+
+        <div>
+            <label for="">
+                <h2>Quantity</h2>
+            </label>
+
+            <mat-form-field appearance="outline">
+                <mat-label>quantity (Kg)</mat-label>
+                <input formControlName="quantity" matInput type="number" placeholder="quantity ">
+            </mat-form-field>
+
+        </div>
+
+        <div>
+            <label>
+                <h2>Freshness</h2>
+            </label>
+            <div class="freshness-radio-button">
+                <mat-radio-group formControlName="freshness" class="example-radio-group">
+                    <mat-radio-button class="example-radio-button" *ngFor="let fresh of FreshnessList" [value]="fresh">
+                        {{fresh}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
         <mat-form-field appearance="outline">
             <mat-label>Price</mat-label>
             <input formControlName="price" matInput type="number" placeholder="Price">
         </mat-form-field>
+
         <mat-form-field appearance="outline">
             <mat-label>Comment</mat-label>
             <textarea formControlName="comment" matInput></textarea>
         </mat-form-field>
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Order Status</mat-label>
+                <mat-select formControlName="orderStatus">
+                    <mat-option *ngFor="let status of orderStatusList" [value]="status">
+                        {{status}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
     </form>
 </div>
+
 <div mat-dialog-actions [align]="'end'">
     <button mat-raised-button color="warn" mat-dialog-close>Close</button>
-    <button mat-raised-button color="primary" style="margin-left: 8px;" (click)="addProduct()">{{actionBtn}}</button>
+    <button mat-raised-button color="primary" style="margin-left: 8px;" (click)="addOrder()">{{actionBtn}}</button>
 </div>

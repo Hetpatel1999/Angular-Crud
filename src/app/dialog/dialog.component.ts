@@ -10,10 +10,11 @@ import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog'
 })
 export class DialogComponent implements OnInit {
 
-  catalog = ["Fruits", "Vegitables", "Electronics", "Spices"];
-  FreshnessList = ["Brand New", "Second Hand", "Refurbished"];
-  productForm !: FormGroup;
+  catalog = ["RM Gold", "RM Star"];
+  FreshnessList = ["New", "Old"];
+  orderForm !: FormGroup;
   actionBtn: string = "Save";
+  orderStatusList = ["Initiated","In-Process","Dispatched","Delivered"];
 
   constructor(private formBuilder: FormBuilder, 
     private api: ApiService, 
@@ -21,54 +22,58 @@ export class DialogComponent implements OnInit {
     private dialogRef: MatDialogRef<DialogComponent>) { }
 
   ngOnInit(): void {
-    this.productForm = this.formBuilder.group({
-      productName: ['', Validators.required],
+    this.orderForm = this.formBuilder.group({
+      buyerName: ['', Validators.required],
       catalogName: ['', Validators.required],
+      quantity : ['', Validators.required],
       freshness: ['', Validators.required],
       price: ['', Validators.required],
       comment: ['', Validators.required],
-      date: ['', Validators.required]
+      date: ['', Validators.required],
+      orderStatus: ['', Validators.required],
     });
 
     if(this.editData){
       this.actionBtn = "Update";
-      this.productForm.controls['productName'].setValue(this.editData.productName);
-      this.productForm.controls['catalogName'].setValue(this.editData.catalogName);
-      this.productForm.controls['freshness'].setValue(this.editData.freshness);
-      this.productForm.controls['price'].setValue(this.editData.price);
-      this.productForm.controls['comment'].setValue(this.editData.comment);
-      this.productForm.controls['date'].setValue(this.editData.date);
+      this.orderForm.controls['buyerName'].setValue(this.editData.buyerName);
+      this.orderForm.controls['catalogName'].setValue(this.editData.catalogName);
+      this.orderForm.controls['freshness'].setValue(this.editData.freshness);
+      this.orderForm.controls['price'].setValue(this.editData.price);
+      this.orderForm.controls['comment'].setValue(this.editData.comment);
+      this.orderForm.controls['date'].setValue(this.editData.date);
+      this.orderForm.controls['quantity'].setValue(this.editData.quantity);
+      this.orderForm.controls['orderStatus'].setValue(this.editData.orderStatus);
     }
   }
 
-  addProduct() {
+  addOrder() {
     if(!this.editData){
-      if (this.productForm.valid) {
-        this.api.postProduct(this.productForm.value)
+      if (this.orderForm.valid) {
+        this.api.postOrder(this.orderForm.value)
           .subscribe({
             next: (res) => {
-              this.productForm.reset();
+              this.orderForm.reset();
               this.dialogRef.close('save');
             },
             error: () => {
-              alert("Error while adding Product.")
+              alert("Error while adding Order.")
             }
           })
       }
     }else{
-      this.updateProduct();
+      this.updateOrder();
     }
   }
 
-  updateProduct() {
-    this.api.putProduct(this.productForm.value, this.editData.id)
+  updateOrder() {
+    this.api.putOrder(this.orderForm.value, this.editData.id)
     .subscribe({
       next: (res) => {
-        this.productForm.reset();
+        this.orderForm.reset();
         this.dialogRef.close('update');
       },
       error: () => {
-        alert("Error while updating Product!!");
+        alert("Error while updating Order!!");
       }
     })
   }
