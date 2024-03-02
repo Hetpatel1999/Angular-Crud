@@ -1,78 +1,114 @@
 {
-  "productList": [
+  "orderList": [
     {
-      "productName": "RM Langar",
-      "catalogName": "Electronics",
-      "freshness": "Refurbished",
-      "price": 500,
+      "id": "8193",
+      "buyerName": "test",
+      "catalogName": "RM Star",
+      "quantity": 74865,
+      "freshness": "New",
+      "price": 64132,
+      "comment": "test",
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "In Process"
+    },
+    {
+      "id": "8193",
+      "buyerName": "test",
+      "catalogName": "RM Star",
+      "quantity": 74865,
+      "freshness": "New",
+      "price": 64132,
+      "comment": "test",
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "In Process"
+    },
+    {
+      "id": "8193",
+      "buyerName": "test",
+      "catalogName": "RM Star",
+      "quantity": 74865,
+      "freshness": "New",
+      "price": 64132,
+      "comment": "test",
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "In Process"
+    },
+    {
+      "id": "8193",
+      "buyerName": "test",
+      "catalogName": "RM Star",
+      "quantity": 74865,
+      "freshness": "New",
+      "price": 64132,
+      "comment": "test",
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "In Process"
+    },
+    {
+      "buyerName": "Khatri Masala",
+      "catalogName": "RM Star",
+      "quantity": 4500,
+      "freshness": "New",
+      "price": 1750,
+      "comment": "Test code 1",
+      "date": "2024-02-29T18:30:00.000Z",
+      "orderStatus": "Initiated",
+      "id": "9e20"
+    },
+    {
+      "id": "8193",
+      "buyerName": "test",
+      "catalogName": "RM Star",
+      "quantity": 74865,
+      "freshness": "New",
+      "price": 64132,
+      "comment": "test",
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "In Process"
+    },
+    {
+      "id": "25c3",
+      "buyerName": "test",
+      "catalogName": "RM Star",
+      "quantity": 1500,
+      "freshness": "New",
+      "price": 45000,
+      "comment": "test",
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "Dispatched"
+    },
+    {
+      "buyerName": "MDH",
+      "catalogName": "RM Gold",
+      "quantity": 1560,
+      "freshness": "New",
+      "price": 1530,
+      "comment": "etsdfvsd",
+      "date": "2024-03-07T18:30:00.000Z",
+      "orderStatus": "Dispatched",
+      "id": "576a"
+    },
+    {
+      "id": "9116",
+      "buyerName": "RM Masala",
+      "catalogName": "RM Star",
+      "quantity": 5600,
+      "freshness": "New",
+      "price": 1560,
       "comment": "Test",
-      "date": "2024-02-01T18:30:00.000Z",
-      "id": "b44e"
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "In-Process"
     },
     {
-      "id": "c20c",
-      "productName": "RM Patel",
-      "catalogName": "Electronics",
-      "freshness": "Brand New",
-      "price": 4560,
-      "comment": "Test consdf",
-      "date": "2024-02-08T18:30:00.000Z"
-    },
-    {
-      "id": "675f",
-      "productName": "RM Gold",
-      "catalogName": "Vegitables",
-      "freshness": "Brand New",
-      "price": 450,
-      "comment": "Test Code",
-      "date": "2024-02-08T18:30:00.000Z"
-    },
-    {
-      "id": "7889",
-      "productName": "RM Diamond",
-      "catalogName": "Spices",
-      "freshness": "Second Hand",
-      "price": 500,
-      "comment": "Test test",
-      "date": "2024-02-21T18:30:00.000Z"
-    },
-    {
-      "id": "d3de",
-      "productName": "Masti",
-      "catalogName": "Spices",
-      "freshness": "Brand New",
-      "price": 520,
-      "comment": "Masti code",
-      "date": "2024-02-21T18:30:00.000Z"
-    },
-    {
-      "id": "19ad",
-      "productName": "Patel",
-      "catalogName": "Electronics",
-      "freshness": "Brand New",
-      "price": 600,
-      "comment": "test",
-      "date": "2024-02-09T18:30:00.000Z"
-    }
-  ],
-  "userList": [
-    {
-      "id": "d3de",
-      "productName": "Masti",
-      "catalogName": "Spices",
-      "freshness": "Brand New",
-      "price": 520,
-      "comment": "Masti code",
-      "date": "2024-02-21T18:30:00.000Z"
-    },
-    {
-      "id": "19ad",
-      "productName": "Patel",
-      "catalogName": "Electronics",
-      "freshness": "Brand New",
-      "price": 600,
-      "comment": "test",
-      "date": "2024-02-09T18:30:00.000Z"
+      "id": "fb78",
+      "buyerName": "RM Spices",
+      "catalogName": "RM Star",
+      "quantity": 1559,
+      "freshness": "New",
+      "price": 16000,
+      "comment": "sfvdfvdfv sfvf",
+      "date": "2024-03-08T18:30:00.000Z",
+      "orderStatus": "Initiated"
     }
   ]
 }

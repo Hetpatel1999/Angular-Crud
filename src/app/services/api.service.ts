@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Order } from '../interface/order.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,21 +17,21 @@ export class ApiService {
     })
   };
 
-  postProduct(data: any){
+  postOrder(data: any){
 
-    return this.http.post<any>("http://localhost:3000/productList/",data, this.httpOptions);
+    return this.http.post<any>("http://localhost:3000/orderList/",data, this.httpOptions);
   }
 
-  getProduct(){
-    return this.http.get<any>("http://localhost:3000/productList/");
+  getOrders(): Observable<Order[]>{
+    return this.http.get<Order[]>("http://localhost:3000/orderList/");
   }
 
-  putProduct(data: any, id: number){
-    return this.http.put<any>("http://localhost:3000/productList/"+id,data, this.httpOptions);
+  putOrder(data: any, id: number){
+    return this.http.put<any>("http://localhost:3000/orderList/"+id,data, this.httpOptions);
   }
 
-  deleteProduct(id: number){
-    return this.http.delete<any>("http://localhost:3000/productList/"+id);
+  deleteOrder(id: number){
+    return this.http.delete<any>("http://localhost:3000/orderList/"+id);
   }
 
 }
